@@ -1,0 +1,136 @@
+\documentclass[a4paper,10pt]{article}
+\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+
+%opening
+\title{Networks ES 402}
+\author{Mid Semester, Spring 2014}
+
+\begin{document}
+
+\maketitle
+
+\begin{enumerate}
+ \item Consider the following networks:
+ \vspace*{2in}
+ 
+ 
+ Network (a) is directed, network (b) is undirected and bipartite. Write down:
+ \begin{enumerate}
+ \item The adjacency matrix of (a).
+ \item The cocitation matrix of (b).
+ \item The indicence matrix of (a).
+ \item The projection matrix of (b) onto its black vertices. 
+ \item The bibliographic coupling matrix of (a). 
+\end{enumerate}
+
+
+\item 
+\begin{enumerate}
+\item What is the difference between a 2-core and a 2-component? 
+\item Give an example of a small network that
+has one 2-core but two 2-components.  
+\item Give an example of a network which has a 3-core but no 4-core. Justify your answer.
+\end{enumerate}
+
+
+\item 
+\begin{enumerate}
+\item Define closeness centrality.
+\item Consider an undirected tree of $n$ vertices. A particular edge in the tree joins vertices $1$ and $2$
+and divides the tee into disjoint regions of $n_1$ and $n_2$ vertices, as sketched here. 
+\vspace*{2in}
+
+Let $C_1$ be the closeness
+centrality of $1$ and $C_2$ be the closeness centrality of $2$. Show that
+\begin{align*}
+\frac{1}{C_1} + \frac{n_1}{n} = \frac{1}{C_2} + \frac{n_2}{n}
+\end{align*}
+(Hint: For a vertex in the left hand side, how does the distance of the vertex to $1$ relate to its distance to $2$? 
+Use this information to find out the relation between $C_1$ and $C_2$.) 
+
+\end{enumerate}
+
+\item 
+\begin{enumerate}
+\item Define betweenness centrality of a vertex. 
+\item Consider an undirected connected tree of $n$ vertices. 
+Suppose that a particular vertex in the tree has degree $k$, so that if we remove that vertex, we get $k$ disjoint parts.
+Suppose the size of the $k$ parts is $n_1$, $n_2$,...,$n_k$. Show that the betweenness centrality $x$ of the vertex
+is 
+\begin{align*}
+ x = n^2 - \sum_{i=1}^k n_i^2.
+\end{align*}
+\item Hence, or otherwise, calculate the betweenness centrality of the $i^{th}$ vertex from the end of a line-graph
+of $n$ vertices, i.e. when $n$ vertices are arranged in a row as follows:
+\vspace*{1.5in}
+\end{enumerate}
+
+
+\item Suppose a graph on $n$ nodes has the following degree distribution. 
+\begin{align*}
+ p_k &= \mbox{ fraction of vertices of degree } k\\
+\end{align*}
+Then, there is a constant $C$ and a constant $\alpha> 1$ such that
+\begin{align*}
+ p_k = \frac{C}{k^\alpha} \mbox{ for } k \ge 1.
+\end{align*}
+Recall that $p_k$ is a density function, hence $\sum_{k=1}^{\infty} p_k = 1$. 
+\begin{enumerate}
+\item Using the above relation give an approximate value for $C$ in terms of the constant $\alpha$.
+\item Give a bound on the maximum degree in the graph (remember that the number of nodes is $n$).
+\item What is the average degree of the graph?
+\end{enumerate}
+
+\item Consider a graph $G$ generated from the Erdos-Renyi random graph model, 
+i.e. for every pair of vertices $(i, j)$, the 
+edge $E_{ij}$ is a random variable that is given by 
+\begin{align*}
+  E_{ij} = \begin{cases}
+           1 \mbox{ with probability } p;\\
+           0 \mbox{ with probability } 1 - p.
+            \end{cases}
+\end{align*}
+\begin{enumerate}
+ \item What is the expected degree of the graph $G$?
+ \item What is the probability that a vertex has degree exactly $k$ ?
+ \item Recall that local clustering coefficient of a node $v$ is defined as the probability that two neighbors of a node $v$ are connected. 
+ Using this definition, what is the clustering coefficient of any node? What is then the average local clustering coefficient?
+\end{enumerate}
+
+
+
+
+
+\item 
+\begin{enumerate}
+\item What is the diameter of a clique?
+\item What is the diameter of a square lattice with $L$ edges and $L+1$ vertices in each side? The following example has $L=5$.
+Give the answer for a general $L$.
+\vspace*{2in}
+
+\item A Cayley tree is a symmetric regular tree in which each vertex is connected to the same number $k$ of vertices, 
+until we get to the leaves. The following example shows a Cayley tree with $k = 3$. 
+\vspace*{2in}
+
+Show that the number of vertices reachable in $d$ steps from the central vertex is $k(k-1)^d$ for $d \ge 1$. 
+Hence find an expression for the diameter of the Cayley tree. 
+
+\item Which of the networks in (a), (b) or (c) behave like a ``small world network'', as defined by having a diameter
+that increases as $\log(n)$ or slower?
+\end{enumerate}
+
+\item 
+ A network consists of a ring of n vertices, each of which is connected to the r vertices immediately
+clockwise from it around the ring and to the r vertices immediately anticlockwise. Thus each
+vertex has degree k = 2r. You can assume that n ≫ r.
+(a) [2 points] How many “connected triples” are there in the network, i.e., a vertex plus an
+unordered pair of its neighbors?
+(b) [4 points] How many triangles are there in the network, i.e., trios of vertices each connected
+to both of the others?
+(c) [4 points] What is the clustering coefﬁcient of the network?
+
+
+\end{enumerate}
+
+\end{document}
