@@ -3,12 +3,17 @@
 \usepackage[utf8]{inputenc}
 
 %opening
-\title{Networks ES 402}
+\title{Networks ES 404}
 \author{Mid Semester, Spring 2014}
 
 \begin{document}
 
 \maketitle
+\begin{center}
+ \textbf{Total: 100 points (+ 4 bonus points). Time: 2.5 hours. Please justify your answers whenever suitable. Please also show your work.} 
+ \line(1,0){300}
+\end{center}
+
 
 \begin{enumerate}
  \item Consider the following networks:
@@ -17,27 +22,28 @@
  
  Network (a) is directed, network (b) is undirected and bipartite. Write down:
  \begin{enumerate}
- \item The adjacency matrix of (a).
- \item The cocitation matrix of (b).
- \item The indicence matrix of (a).
- \item The projection matrix of (b) onto its black vertices. 
- \item The bibliographic coupling matrix of (a). 
+ \item (5 points) The adjacency matrix of (a).
+ \item (5 points) The cocitation matrix of (b).
+ \item (5 points) The indicence matrix of (a).
+ \item (5 points) The projection matrix of (b) onto its black vertices. 
+ \item (5 points) The bibliographic coupling matrix of (a). 
 \end{enumerate}
 
 
 \item 
 \begin{enumerate}
-\item What is the difference between a 2-core and a 2-component? 
-\item Give an example of a small network that
-has one 2-core but two 2-components.  
-\item Give an example of a network which has a 3-core but no 4-core. Justify your answer.
+\item (2 points) For a graph $G$, define $k_{\max}(G)$ to be the maximum $k$ such that the $k$-core of $G$ is non-empty.
+Give upper and lower bound for $k$ in terms of the degrees (e.g. maximum or minimum) of $G$. 
+\item (5 points) For a graph $G$, and a number $k$, how would you find out a set that is a $k$-core? No need to prove
+the correctness of your algorithm.
+\item (5 points) Give an example of a network which has a 3-core but no 4-core. Justify your answer.
 \end{enumerate}
 
 
 \item 
 \begin{enumerate}
-\item Define closeness centrality.
-\item Consider an undirected tree of $n$ vertices. A particular edge in the tree joins vertices $1$ and $2$
+\item (2 points) Define closeness centrality.
+\item (6 points) Consider an undirected tree of $n$ vertices. A particular edge in the tree joins vertices $1$ and $2$
 and divides the tee into disjoint regions of $n_1$ and $n_2$ vertices, as sketched here. 
 \vspace*{2in}
 
@@ -53,15 +59,16 @@ Use this information to find out the relation between $C_1$ and $C_2$.)
 
 \item 
 \begin{enumerate}
-\item Define betweenness centrality of a vertex. 
-\item Consider an undirected connected tree of $n$ vertices. 
+\item (2 points) Define betweenness centrality of a vertex. 
+\item (6 points) Consider an undirected connected tree of $n$ vertices. 
 Suppose that a particular vertex in the tree has degree $k$, so that if we remove that vertex, we get $k$ disjoint parts.
 Suppose the size of the $k$ parts is $n_1$, $n_2$,...,$n_k$. Show that the betweenness centrality $x$ of the vertex
 is 
 \begin{align*}
  x = n^2 - \sum_{i=1}^k n_i^2.
 \end{align*}
-\item Hence, or otherwise, calculate the betweenness centrality of the $i^{th}$ vertex from the end of a line-graph
+(Hint: Recall that in a tree there is only path between pairs of edges.)
+\item (4 points) Hence, or otherwise, calculate the betweenness centrality of the $i^{th}$ vertex from the end of a line-graph
 of $n$ vertices, i.e. when $n$ vertices are arranged in a row as follows:
 \vspace*{1.5in}
 \end{enumerate}
@@ -77,9 +84,9 @@ Then, there is a constant $C$ and a constant $\alpha> 1$ such that
 \end{align*}
 Recall that $p_k$ is a density function, hence $\sum_{k=1}^{\infty} p_k = 1$. 
 \begin{enumerate}
-\item Using the above relation give an approximate value for $C$ in terms of the constant $\alpha$.
-\item Give a bound on the maximum degree in the graph (remember that the number of nodes is $n$).
-\item What is the average degree of the graph?
+\item (5 points) Using the above relation give an approximate value for $C$ in terms of the constant $\alpha$.
+\item (2 points) Give a bound on the maximum degree in the graph (remember that the number of nodes is $n$).
+\item (5 points) What is the average degree of the graph?
 \end{enumerate}
 
 \item Consider a graph $G$ generated from the Erdos-Renyi random graph model, 
@@ -92,9 +99,9 @@ edge $E_{ij}$ is a random variable that is given by
             \end{cases}
 \end{align*}
 \begin{enumerate}
- \item What is the expected degree of the graph $G$?
- \item What is the probability that a vertex has degree exactly $k$ ?
- \item Recall that local clustering coefficient of a node $v$ is defined as the probability that two neighbors of a node $v$ are connected. 
+ \item (5 points) Compute the expected degree of the graph $G$? Justify your answer.
+ \item (5 points) Compute the probability that a vertex has degree exactly $k$ ? Again, justify your answer. 
+ \item (5 points) Recall that local clustering coefficient of a node $v$ is defined as the probability that two neighbors of a node $v$ are connected. 
  Using this definition, what is the clustering coefficient of any node? What is then the average local clustering coefficient?
 \end{enumerate}
 
@@ -104,33 +111,45 @@ edge $E_{ij}$ is a random variable that is given by
 
 \item 
 \begin{enumerate}
-\item What is the diameter of a clique?
-\item What is the diameter of a square lattice with $L$ edges and $L+1$ vertices in each side? The following example has $L=5$.
+\item (2 points) What is the diameter of a clique?
+\item (5 points) What is the diameter of a square lattice with $L$ edges and $L+1$ vertices in each side? The following example has $L=5$.
 Give the answer for a general $L$.
 \vspace*{2in}
 
-\item A Cayley tree is a symmetric regular tree in which each vertex is connected to the same number $k$ of vertices, 
+\item A (5 points) Cayley tree is a symmetric regular tree in which each vertex is connected to the same number $k$ of vertices, 
 until we get to the leaves. The following example shows a Cayley tree with $k = 3$. 
 \vspace*{2in}
 
 Show that the number of vertices reachable in $d$ steps from the central vertex is $k(k-1)^d$ for $d \ge 1$. 
 Hence find an expression for the diameter of the Cayley tree. 
 
-\item Which of the networks in (a), (b) or (c) behave like a ``small world network'', as defined by having a diameter
+\item (2 points) Which of the networks in (a), (b) or (c) behave like a ``small world network'', as defined by having a diameter
 that increases as $\log(n)$ or slower?
 \end{enumerate}
 
-\item 
- A network consists of a ring of n vertices, each of which is connected to the r vertices immediately.
-clockwise from it around the ring and to the r vertices immediately anticlockwise. Thus each
-vertex has degree k = 2r. You can assume that $n >>r$.
-(a) [2 points] How many “connected triples” are there in the network, i.e., a vertex plus an
-unordered pair of its neighbors?
-(b) [4 points] How many triangles are there in the network, i.e., trios of vertices each connected
-to both of the others?
-(c) [4 points] What is the clustering coeffcient of the network?
+\item Let $G$ be a $k$ regular undirected graph (i.e. a network in which every vertex has degree $k$).
+\begin{enumerate}
+\item (3 points) Show that the vector $\mathbf{1} = (1, 1, \ldots, 1)$ is an eigenvector of the adjacency matrix of $G$. Recall that
+an a vector is an eigenvector of a matrix $A$ if $Av = \lambda v$ for some $\lambda$. 
+\item (2 points) What are the eigenvector centralities of the vertices of $G$?
+\item (2 points) Name a centrality measure that would take different values on the nodes of $G$. 
+\item (Bonus 4 points) Give an example of a regular graph $G$ where for two nodes in $G$, your centrality measure has different values. 
+\end{enumerate}
+
+
 
 
 \end{enumerate}
 
 \end{document}
+ A network consists of a ring of $n$ vertices, each of which is connected to the $r$ vertices immediately.
+clockwise from it around the ring and to the $r$ vertices immediately anticlockwise. Thus each
+vertex has degree $k = 2r$. You can assume that $n >>r$.
+\begin{enumerate}
+\item How many “connected triples” are there in the network, i.e., a vertex plus an
+unordered pair of its neighbors?
+\item How many triangles are there in the network, i.e., trios of vertices each connected
+to both of the others?
+\item What is the clustering coeffcient of the network?
+\end{enumerate}
+(\textbf{Hint}: Do a small example with $r = 5$. Draw a vertex with $5$ vertices to its right and 
